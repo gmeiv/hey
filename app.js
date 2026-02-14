@@ -62,23 +62,22 @@ document.querySelectorAll('.flower-container').forEach(el => {
     }, 3000);
 
     const texts = [
-  ,
-  "I love you",
-  "More than you know",
-  "More than I love myself",
-  "More than you will say you love me", 
-  "Maybe my all of my body parts",
-  "Will be jealous of you",
-  "Because you occupied my heart",
-  "Occupied my mind too", 
-  "You have my soul in your hands",
-  "You have my life in your eyes",
-  "And even the brightest stars",
-  "Will be jealous of your shine",
-  "Even the radiating sun",
-  "Will be dazzled by your light",
-  "And I will be forever grateful",
-  "To have you in my life"
+"I love you",
+"More than you know",
+"More than I love myself",
+"More than you could ever say you love me",
+"Maybe all of my body parts",
+"Will be jealous of you",
+"Because you occupy my heart",
+"You occupy my mind too",
+"You have my soul in your hands",
+"You have my life in your eyes",
+"And even the brightest stars",
+"Will be jealous of your shine",
+"Even the radiating sun",
+"Will be dazzled by your light",
+"And I will be forever grateful",
+"To have you in my life"
 ];
 
 let index = 0;
