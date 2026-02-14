@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me?</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #fff0f5;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+        font-size: clamp(1.5rem, 5vw, 3rem);
+    }
+
+    button {
+        padding: clamp(10px, 2vw, 20px) clamp(20px, 4vw, 40px);
+        font-size: clamp(16px, 4vw, 24px);
+        margin: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        min-width: 100px;
+    }
+
+    #yesBtn {
+        background-color: #ff69b4;
+        color: white;
+    }
+
+    #noBtn {
+        background-color: #1e90ff;
+        color: white;
+    }
+
+    #emoji {
+        font-size: clamp(30px, 10vw, 80px);
+        margin-top: 20px;
+        display: none;
+        line-height: 1.2;
+    }
+
+    
+
+    @media (max-width: 400px) {
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+       
+    }
+    #return {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: #f83c3c;
+        padding: 10px 14px;
+        border-radius: 8px;
+        
+        text-decoration: none;
+        transition: all 0.2s ease;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    #return:hover {
+        background-color: #d12e3f;
+        transform: scale(1.1);
+    }
+    
+
+</style>
+</head>
+<body>
+
+<h1>LOVE MO BA AKO?</h1>
+<button id="yesBtn">Yes</button>
+<button id="noBtn">No</button>
+<div id="emoji">HUHHHH DI MO AKO LOVE?</div>
+<a href="index_four.html" id="return">BABY WAG MO <br> NA TO ICLICKKK</a>
+
+
+<script>
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const emoji = document.getElementById("emoji");
+
+yesBtn.addEventListener("click", () => {
+    let yesScale = 1;
+    let noScale = 1;
+
+    const interval = setInterval(() => {
+        yesScale -= 0.05; // shrink yes
+        noScale += 0.05;  // grow no
+
+        yesBtn.style.transform = `scale(${yesScale})`;
+        noBtn.style.transform = `scale(${noScale})`;
+
+        if (yesScale <= 0) {
+            yesBtn.style.display = "none"; // hide yes button
+            clearInterval(interval);
+        }
+    }, 50);
+});
+
+noBtn.addEventListener("click", () => {
+    // hide buttons
+    yesBtn.style.display = "none";
+    noBtn.style.display = "none";
+    // show sad emoji/text
+    emoji.style.display = "block";
+});
+</script>
+
+</body>
+</html>
